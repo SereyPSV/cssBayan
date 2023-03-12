@@ -3,3 +3,63 @@ body {
   font-size: 30px;
   background-color: #F6F6ED;
 }
+
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+/* wrapper */
+.wrapper {
+    max-width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.header__title {
+  font-size: 65px;
+  font-weight: 900;
+  line-height: 75px;
+  margin: 20px;
+  padding: 0;
+}
+
+.accordion__item {
+  margin: 0;
+  padding: 0;
+  /* cursor: pointer; */
+}
+
+.accordion__img {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  transition: all 3.3s ease;
+}
+
+.img {
+  padding-bottom: 20px;
+}
+
+.accordion__title:after {
+  content: "🞥";
+  display: block;
+
+  position: absolute;
+  top: 50%;
+  right: 20px;
+
+  transform: translateY(-50%);
+}
+
+.accordion__title:after {
+  content: "✖";
+  display: block;
+
+  position: absolute;
+  top: 50%;
+  right: 21px;
+
+  transform: translateY(-50%);
+}
