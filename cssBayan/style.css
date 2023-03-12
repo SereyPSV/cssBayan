@@ -2,6 +2,7 @@ body {
   font-family: Arial, sans-serif;
   font-size: 30px;
   background-color: #F6F6ED;
+  /* overflow-y: hidden; */
 }
 
 *,
@@ -10,7 +11,6 @@ body {
     box-sizing: border-box;
 }
 
-/* wrapper */
 .wrapper {
     max-width: 80%;
     margin-left: auto;
@@ -28,18 +28,43 @@ body {
 .accordion__item {
   margin: 0;
   padding: 0;
-  /* cursor: pointer; */
+}
+
+.accordion__input {
+  display: none;
+}
+
+.accordion__title {
+  font-size: 40px;
+  font-weight: 900;
+  line-height: 55px;
+  margin: 0px;
+  padding: 20px 0;
+  color: #1E1ED1;
+
+  display: block;
+  position: relative;
+
+  border-top: solid #D3D9E1;
+  cursor: pointer;
+}
+
+.accordion__title:hover {
+  color: #000;
 }
 
 .accordion__img {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  transition: all 3.3s ease;
+  transition: all 0.3s ease;
+  height: 0;
 }
 
 .img {
   padding-bottom: 20px;
+  opacity: 1;
+  height: inherit;
 }
 
 .accordion__title:after {
@@ -62,4 +87,14 @@ body {
   right: 21px;
 
   transform: translateY(-50%);
+}
+
+.accordion__input:hover ~ .accordion__img {
+  display: flex;
+  height: 700px;
+}
+
+.accordion__input:checked ~ .accordion__img {
+  display: flex;
+  height: 700px;
 }
