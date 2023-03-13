@@ -17,6 +17,7 @@ body {
   margin-left: auto;
   margin-right: auto;
 }
+
 @media screen and (max-width: 1150px) {
   .wrapper {
       max-width: 780px;
@@ -65,6 +66,7 @@ body {
   margin: 20px;
   padding: 0;
 }
+
 @media screen and (max-width: 1150px) {
   .header__title {
       font-size: 50px;
@@ -114,14 +116,8 @@ body {
   }
 }
 
-
-.accordion__wrapper {
+.area {
   cursor: pointer;
-}
-
-.accordion__item {
-  margin: 0;
-  padding: 0;
 }
 
 .accordion__input {
@@ -142,6 +138,7 @@ body {
   border-top: solid #D3D9E1;
   cursor: pointer;
 }
+
 @media screen and (max-width: 1150px) {
   .accordion__title {
       font-size: 30px;
@@ -191,16 +188,11 @@ body {
   }
 }
 
-
-.accordion__title:hover {
-  color: #000;
-}
-
 .accordion__img {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  height: 0;
+  height: 0px;
   transition: all .3s ease;
 }
 
@@ -209,7 +201,6 @@ body {
   opacity: 1;
   height: inherit;
 }
-
 
 .accordion__wrapper:hover .accordion__title:after {
   content: "🞥";
@@ -221,11 +212,12 @@ body {
 
   transform: translateY(-50%);
 }
+
 .accordion__wrapper:hover .area {
   color: #000;
 }
 
-.accordion__input:hover ~ .accordion__title:after {
+.accordion__title_label:hover .accordion__title:after {
   content: "✖";
   display: block;
 
@@ -234,30 +226,16 @@ body {
   right: 21px;
 
   transform: translateY(-50%);
-}
-.accordion__input:checked ~ .accordion__title:after {
-  content: "✖";
-  display: block;
-
-  position: absolute;
-  top: 50%;
-  right: 21px;
-
-  transform: translateY(-50%);
-}
-.accordion__input:checked ~ .area {
-  color: #000;
 }
 
 .accordion__input:hover ~ .accordion__img {
-  display: flex;
-  height: 700px;
+  height: 500px;
 }
 
 .accordion__input:checked ~ .accordion__img {
-  display: flex;
-  height: 700px;
+  height: 500px;
 }
+
 @media screen and (max-width: 1150px) {
   .accordion__input:hover ~ .accordion__img {
       display: flex;
@@ -350,6 +328,7 @@ body {
 .accordion__input:active ~ .area {
   color: #1E1ED1;
 }
+
 .accordion__input:active ~ .area {
   opacity: 0.7;
 }
